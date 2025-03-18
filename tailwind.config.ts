@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				cruise: {
+					50: '#F0F7FF',
+					100: '#E0EFFF',
+					200: '#B8DBFF',
+					300: '#8CC0FF',
+					400: '#5A9EFF',
+					500: '#2F75F2',
+					600: '#1E5CD0',
+					700: '#1346AE',
+					800: '#0B338C',
+					900: '#061F5C',
+					950: '#021338',
+				},
+				gold: {
+					50: '#FFF9EC',
+					100: '#FFF3D6',
+					200: '#FFE4AD',
+					300: '#FFD080',
+					400: '#FFBA52',
+					500: '#F5A623',
+					600: '#D98E15',
+					700: '#B3720E',
+					800: '#8C590B',
+					900: '#664009',
+					950: '#422800',
 				}
 			},
 			borderRadius: {
@@ -68,27 +95,38 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['SF Pro Display', 'Inter', 'sans-serif'],
+			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slide-in-right': {
+					'0%': { opacity: '0', transform: 'translateX(20px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-in-right': 'slide-in-right 0.5s ease-out forwards'
+			},
+			boxShadow: {
+				'soft': '0 2px 15px rgba(0, 0, 0, 0.05)',
+				'medium': '0 4px 20px rgba(0, 0, 0, 0.07)',
+				'glass': '0 8px 32px rgba(31, 38, 135, 0.07)'
 			}
 		}
 	},
