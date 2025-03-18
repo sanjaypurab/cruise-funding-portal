@@ -84,17 +84,27 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex">
-                <MapPin className="mr-2 h-5 w-5 text-cruise-400" />
+                <MapPin className="mr-2 h-5 w-5 text-cruise-400 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white">Headquarters</p>
-                  <p className="text-gray-300">Financial District, Muscat, Oman</p>
+                  <p className="text-white">Oman Headquarters</p>
+                  <address className="text-gray-300 not-italic">
+                    Cruise World International Limited (HO)<br />
+                    25 5th Floor Office 502 Dohat Al Adab St.<br />
+                    AL Khuwair, Muscat, Oman<br />
+                    Sultanate of Oman
+                  </address>
                 </div>
               </li>
               <li className="flex">
-                <MapPin className="mr-2 h-5 w-5 text-cruise-400" />
+                <MapPin className="mr-2 h-5 w-5 text-cruise-400 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white">Branch Office</p>
-                  <p className="text-gray-300">Levent, Istanbul, Turkey</p>
+                  <p className="text-white">Turkey Branch Office</p>
+                  <address className="text-gray-300 not-italic">
+                    Kaptanpasa Mah. Piyalepasa Bulvari Blv.<br />
+                    Famas Plaza B Blok No: 77 Ic<br />
+                    Kapi No: 77/1 34384 Sisli Istanbul<br />
+                    Istanbul - People Republic Of Turkey
+                  </address>
                 </div>
               </li>
               <li className="flex items-center">

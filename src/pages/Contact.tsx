@@ -86,15 +86,32 @@ const Contact: React.FC = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-cruise-50 flex items-center justify-center mr-4">
+                <div className="w-10 h-10 rounded-full bg-cruise-50 flex items-center justify-center mr-4 flex-shrink-0">
                   <MapPin className="h-5 w-5 text-cruise-500" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium mb-1">Visit Us</h3>
-                  <p className="text-gray-600 mb-1">Oman Headquarters:</p>
-                  <p className="text-cruise-600">Financial District, Muscat, Oman</p>
-                  <p className="text-gray-600 mt-2 mb-1">Turkey Office:</p>
-                  <p className="text-cruise-600">Levent, Istanbul, Turkey</p>
+                  <h3 className="text-lg font-medium mb-1">Oman Headquarters</h3>
+                  <address className="text-gray-600 not-italic">
+                    Cruise World International Limited (HO)<br />
+                    25 5th Floor Office 502 Dohat Al Adab St.<br />
+                    AL Khuwair, Muscat, Oman<br />
+                    Sultanate of Oman
+                  </address>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-10 h-10 rounded-full bg-cruise-50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-cruise-500" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium mb-1">Turkey Branch Office</h3>
+                  <address className="text-gray-600 not-italic">
+                    Kaptanpasa Mah. Piyalepasa Bulvari Blv.<br />
+                    Famas Plaza B Blok No: 77 Ic<br />
+                    Kapi No: 77/1 34384 Sisli Istanbul<br />
+                    Istanbul - People Republic Of Turkey
+                  </address>
                 </div>
               </div>
               
