@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import { Send, CheckCircle } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -15,17 +16,32 @@ const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API submission
-    setTimeout(() => {
+    // Prepare the template parameters
+    const templateParams = {
+      from_name: name,
+      reply_to: email,
+      subject: subject,
+      message: message
+    };
+    
+    try {
+      // Replace these with your actual EmailJS service ID, template ID, and user ID
+      await emailjs.send(
+        'YOUR_SERVICE_ID', 
+        'YOUR_TEMPLATE_ID', 
+        templateParams,
+        'YOUR_USER_ID'
+      );
+      
       toast({
         title: "Message Sent",
         description: "We've received your message and will respond shortly.",
       });
-      setIsSubmitting(false);
+      
       setSubmitted(true);
       
       // Reset form
@@ -33,7 +49,16 @@ const ContactForm: React.FC = () => {
       setEmail('');
       setSubject('');
       setMessage('');
-    }, 1500);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast({
+        title: "Error Sending Message",
+        description: "There was an issue sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
@@ -23,6 +22,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { CalendarIcon, CheckCircle } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: "Full name must be at least 2 characters." }),
@@ -52,19 +52,43 @@ const Application: React.FC = () => {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const templateParams = {
+        fullName: values.fullName,
+        email: values.email,
+        phone: values.phone,
+        company: values.company,
+        fundingAmount: values.fundingAmount,
+        fundingPurpose: values.fundingPurpose,
+        businessDescription: values.businessDescription,
+      };
+      
+      await emailjs.send(
+        'YOUR_SERVICE_ID', 
+        'YOUR_TEMPLATE_ID', 
+        templateParams,
+        'YOUR_USER_ID'
+      );
+      
       console.log(values);
-      setIsSubmitting(false);
       setSubmitted(true);
       toast({
         title: "Application Submitted",
         description: "We've received your application and will contact you shortly.",
       });
-    }, 1500);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast({
+        title: "Error Submitting Application",
+        description: "There was a problem submitting your application. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (submitted) {
