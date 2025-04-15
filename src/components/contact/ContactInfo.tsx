@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-
 const ContactInfo: React.FC = () => {
-  return (
-    <div className="bg-white rounded-xl shadow-md p-8">
+  return <div className="bg-white rounded-xl shadow-md p-8">
       <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
       
       <div className="space-y-6">
@@ -15,7 +12,7 @@ const ContactInfo: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium mb-1">Email Us</h3>
             <p className="text-gray-600 mb-1">General Inquiries:</p>
-            <p className="text-cruise-600">info@cruiseworld.com</p>
+            <p className="text-cruise-600">info@cruiseworldinterltd.com</p>
             <p className="text-gray-600 mt-2 mb-1">Funding Applications:</p>
             <p className="text-cruise-600">funding@cruiseworld.com</p>
           </div>
@@ -107,8 +104,6 @@ const ContactInfo: React.FC = () => {
           </a>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ContactInfo;
