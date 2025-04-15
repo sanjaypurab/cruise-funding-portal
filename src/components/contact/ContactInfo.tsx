@@ -14,7 +14,7 @@ const ContactInfo: React.FC = () => {
             <p className="text-gray-600 mb-1">General Inquiries:</p>
             <p className="text-cruise-600">info@cruiseworldinterltd.com</p>
             <p className="text-gray-600 mt-2 mb-1">Funding Applications:</p>
-            <p className="text-cruise-600">funding@cruiseworld.com</p>
+            <p className="text-cruise-600">funding@cruiseworldinterltd.com</p>
           </div>
         </div>
         
