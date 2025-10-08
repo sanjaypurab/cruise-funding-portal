@@ -12,9 +12,9 @@ const ContactInfo: React.FC = () => {
           <div>
             <h3 className="text-lg font-medium mb-1">Email Us</h3>
             <p className="text-gray-600 mb-1">General Inquiries:</p>
-            <p className="text-cruise-600">info@cruiseworldinterltd.com</p>
+            <p className="text-cruise-600">info@cruisefinancegroupinterltd.com</p>
             <p className="text-gray-600 mt-2 mb-1">Funding Applications:</p>
-            <p className="text-cruise-600">funding@cruiseworldinterltd.com</p>
+            <p className="text-cruise-600">funding@cruisefinancegroupinterltd.com</p>
           </div>
         </div>
         
