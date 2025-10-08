@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Hero from '@/components/Hero';
+import HeroCarousel from '@/components/HeroCarousel';
 import ServiceCard from '@/components/ServiceCard';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, DollarSign, BarChart3, Briefcase, PiggyBank, Building, Globe } from 'lucide-react';
@@ -9,12 +8,7 @@ import { ChevronRight, DollarSign, BarChart3, Briefcase, PiggyBank, Building, Gl
 const Index = () => {
   return (
     <>
-      <Hero
-        title="Global Investment Funding Solutions"
-        subtitle="Connecting ambitious businesses with the capital they need to grow and thrive."
-        ctaText="Apply For Funding"
-        ctaLink="/application"
-      />
+      <HeroCarousel />
       
       {/* Services Section */}
       <section className="py-20 bg-white">
