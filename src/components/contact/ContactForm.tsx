@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import { Send, CheckCircle } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import { supabase } from '@/integrations/supabase/client';
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -20,22 +20,18 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Prepare the template parameters
-    const templateParams = {
-      from_name: name,
-      reply_to: email,
-      subject: subject,
-      message: message
-    };
-    
     try {
-      // Replace these with your actual EmailJS service ID, template ID, and user ID
-      await emailjs.send(
-        'YOUR_SERVICE_ID', 
-        'YOUR_TEMPLATE_ID', 
-        templateParams,
-        'YOUR_USER_ID'
-      );
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: {
+          type: 'contact',
+          name,
+          email,
+          subject,
+          message
+        }
+      });
+      
+      if (error) throw error;
       
       toast({
         title: "Message Sent",

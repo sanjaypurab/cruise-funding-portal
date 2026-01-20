@@ -51,9 +51,10 @@ const slides = [
 ];
 
 const HeroCarousel = () => {
+  const autoplayPlugin = Autoplay({ delay: 5000, stopOnInteraction: true });
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, duration: 30 },
-    [Autoplay({ delay: 5000, stopOnInteraction: true })]
+    [autoplayPlugin as any]
   );
   
   const [selectedIndex, setSelectedIndex] = useState(0);
