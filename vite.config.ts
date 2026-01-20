@@ -8,7 +8,12 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    historyApiFallback: true,
   },
+  preview: {
+    port: 8080,
+  },
+  appType: 'spa',
   plugins: [
     react(),
     mode === 'development' &&
