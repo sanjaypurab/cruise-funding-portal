@@ -22,7 +22,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { CalendarIcon, CheckCircle } from 'lucide-react';
-import emailjs from 'emailjs-com';
+import { supabase } from '@/integrations/supabase/client';
 
 const formSchema = z.object({
   fullName: z.string().min(2, { message: "Full name must be at least 2 characters." }),
@@ -56,24 +56,21 @@ const Application: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      const templateParams = {
-        fullName: values.fullName,
-        email: values.email,
-        phone: values.phone,
-        company: values.company,
-        fundingAmount: values.fundingAmount,
-        fundingPurpose: values.fundingPurpose,
-        businessDescription: values.businessDescription,
-      };
+      const { data, error } = await supabase.functions.invoke('send-email', {
+        body: {
+          type: 'application',
+          name: values.fullName,
+          email: values.email,
+          phone: values.phone,
+          company: values.company,
+          fundingAmount: values.fundingAmount,
+          fundingPurpose: values.fundingPurpose,
+          businessDescription: values.businessDescription,
+        }
+      });
       
-      await emailjs.send(
-        'YOUR_SERVICE_ID', 
-        'YOUR_TEMPLATE_ID', 
-        templateParams,
-        'YOUR_USER_ID'
-      );
+      if (error) throw error;
       
-      console.log(values);
       setSubmitted(true);
       toast({
         title: "Application Submitted",
