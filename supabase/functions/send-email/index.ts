@@ -66,8 +66,8 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to company
     const notificationResponse = await resend.emails.send({
-      from: "Cruise World International <onboarding@resend.dev>",
-      to: ["onboarding@resend.dev"], // Replace with actual company email
+      from: "Cruise Finance Group <onboarding@resend.dev>",
+      to: ["info@cruisefinancegroupinterltd.com"],
       subject: emailSubject,
       html: emailHtml,
     });
@@ -79,13 +79,13 @@ const handler = async (req: Request): Promise<Response> => {
       ? `
         <h1>Thank you for contacting us, ${data.name}!</h1>
         <p>We have received your message and will get back to you as soon as possible.</p>
-        <p>Best regards,<br>Cruise World International Team</p>
+        <p>Best regards,<br>Cruise Finance Group Team</p>
       `
       : `
         <h1>Thank you for your funding application, ${data.name}!</h1>
         <p>We have received your application for ${data.company}.</p>
         <p>Our team will review your application and contact you within 2-3 business days.</p>
-        <p>Best regards,<br>Cruise World International Team</p>
+        <p>Best regards,<br>Cruise Finance Group Team</p>
       `;
 
     const confirmationResponse = await resend.emails.send({
