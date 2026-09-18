@@ -14,6 +14,298 @@ export type Database = {
   }
   public: {
     Tables: {
+      application_audit_log: {
+        Row: {
+          action: string
+          actor_user_id: string | null
+          application_id: string
+          created_at: string
+          id: string
+          metadata: Json
+        }
+        Insert: {
+          action: string
+          actor_user_id?: string | null
+          application_id: string
+          created_at?: string
+          id?: string
+          metadata?: Json
+        }
+        Update: {
+          action?: string
+          actor_user_id?: string | null
+          application_id?: string
+          created_at?: string
+          id?: string
+          metadata?: Json
+        }
+        Relationships: [
+          {
+            foreignKeyName: "application_audit_log_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      application_documents: {
+        Row: {
+          application_id: string
+          category: string | null
+          created_at: string
+          file_size: number
+          id: string
+          mime_type: string
+          original_name: string
+          storage_path: string
+        }
+        Insert: {
+          application_id: string
+          category?: string | null
+          created_at?: string
+          file_size: number
+          id?: string
+          mime_type: string
+          original_name: string
+          storage_path: string
+        }
+        Update: {
+          application_id?: string
+          category?: string | null
+          created_at?: string
+          file_size?: number
+          id?: string
+          mime_type?: string
+          original_name?: string
+          storage_path?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "application_documents_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      applications: {
+        Row: {
+          account_type: string | null
+          address: string | null
+          annual_turnover: number | null
+          applicant_email: string | null
+          application_number: string
+          approximate_equity: number | null
+          bank_statement_availability: string | null
+          business_address: string | null
+          business_city: string | null
+          business_email: string | null
+          business_phone: string | null
+          business_plan_available: string | null
+          business_state: string | null
+          business_type: string | null
+          business_zip: string | null
+          city: string | null
+          company_name: string | null
+          corporate_bank_name: string | null
+          created_at: string
+          data_hash: string | null
+          date_of_birth: string | null
+          desired_financing_term: string | null
+          document_version: string | null
+          employees: number | null
+          existing_business_loans: boolean | null
+          existing_lender: string | null
+          existing_line_of_credit: boolean | null
+          existing_loan_count: number | null
+          existing_monthly_repayment: number | null
+          existing_outstanding_balance: number | null
+          fax: string | null
+          financing_purpose: string
+          financing_purpose_other: string | null
+          gender: string | null
+          home_phone: string | null
+          id: string
+          internal_notes: string | null
+          inventory_value: number | null
+          legal_status: string | null
+          line_of_credit_balance: number | null
+          line_of_credit_lender: string | null
+          line_of_credit_limit: number | null
+          mobile: string
+          net_profit: number | null
+          number_of_partners: number | null
+          outstanding_mortgage: number | null
+          owner_name: string
+          ownership_percentage: number
+          payload: Json
+          pdf_url: string | null
+          projected_atps: number | null
+          property_location: string | null
+          real_estate_owned: boolean | null
+          real_estate_value: number | null
+          requested_financing_amount: number
+          signature_url: string | null
+          signature_user_agent: string | null
+          signed_at: string | null
+          state: string | null
+          status: string
+          total_annual_sales: number | null
+          total_assets: number | null
+          total_liabilities: number | null
+          uid: string | null
+          updated_at: string
+          website: string | null
+          year_established: number | null
+          years_in_business: number | null
+          zip_code: string | null
+        }
+        Insert: {
+          account_type?: string | null
+          address?: string | null
+          annual_turnover?: number | null
+          applicant_email?: string | null
+          application_number: string
+          approximate_equity?: number | null
+          bank_statement_availability?: string | null
+          business_address?: string | null
+          business_city?: string | null
+          business_email?: string | null
+          business_phone?: string | null
+          business_plan_available?: string | null
+          business_state?: string | null
+          business_type?: string | null
+          business_zip?: string | null
+          city?: string | null
+          company_name?: string | null
+          corporate_bank_name?: string | null
+          created_at?: string
+          data_hash?: string | null
+          date_of_birth?: string | null
+          desired_financing_term?: string | null
+          document_version?: string | null
+          employees?: number | null
+          existing_business_loans?: boolean | null
+          existing_lender?: string | null
+          existing_line_of_credit?: boolean | null
+          existing_loan_count?: number | null
+          existing_monthly_repayment?: number | null
+          existing_outstanding_balance?: number | null
+          fax?: string | null
+          financing_purpose: string
+          financing_purpose_other?: string | null
+          gender?: string | null
+          home_phone?: string | null
+          id?: string
+          internal_notes?: string | null
+          inventory_value?: number | null
+          legal_status?: string | null
+          line_of_credit_balance?: number | null
+          line_of_credit_lender?: string | null
+          line_of_credit_limit?: number | null
+          mobile: string
+          net_profit?: number | null
+          number_of_partners?: number | null
+          outstanding_mortgage?: number | null
+          owner_name: string
+          ownership_percentage: number
+          payload?: Json
+          pdf_url?: string | null
+          projected_atps?: number | null
+          property_location?: string | null
+          real_estate_owned?: boolean | null
+          real_estate_value?: number | null
+          requested_financing_amount: number
+          signature_url?: string | null
+          signature_user_agent?: string | null
+          signed_at?: string | null
+          state?: string | null
+          status?: string
+          total_annual_sales?: number | null
+          total_assets?: number | null
+          total_liabilities?: number | null
+          uid?: string | null
+          updated_at?: string
+          website?: string | null
+          year_established?: number | null
+          years_in_business?: number | null
+          zip_code?: string | null
+        }
+        Update: {
+          account_type?: string | null
+          address?: string | null
+          annual_turnover?: number | null
+          applicant_email?: string | null
+          application_number?: string
+          approximate_equity?: number | null
+          bank_statement_availability?: string | null
+          business_address?: string | null
+          business_city?: string | null
+          business_email?: string | null
+          business_phone?: string | null
+          business_plan_available?: string | null
+          business_state?: string | null
+          business_type?: string | null
+          business_zip?: string | null
+          city?: string | null
+          company_name?: string | null
+          corporate_bank_name?: string | null
+          created_at?: string
+          data_hash?: string | null
+          date_of_birth?: string | null
+          desired_financing_term?: string | null
+          document_version?: string | null
+          employees?: number | null
+          existing_business_loans?: boolean | null
+          existing_lender?: string | null
+          existing_line_of_credit?: boolean | null
+          existing_loan_count?: number | null
+          existing_monthly_repayment?: number | null
+          existing_outstanding_balance?: number | null
+          fax?: string | null
+          financing_purpose?: string
+          financing_purpose_other?: string | null
+          gender?: string | null
+          home_phone?: string | null
+          id?: string
+          internal_notes?: string | null
+          inventory_value?: number | null
+          legal_status?: string | null
+          line_of_credit_balance?: number | null
+          line_of_credit_lender?: string | null
+          line_of_credit_limit?: number | null
+          mobile?: string
+          net_profit?: number | null
+          number_of_partners?: number | null
+          outstanding_mortgage?: number | null
+          owner_name?: string
+          ownership_percentage?: number
+          payload?: Json
+          pdf_url?: string | null
+          projected_atps?: number | null
+          property_location?: string | null
+          real_estate_owned?: boolean | null
+          real_estate_value?: number | null
+          requested_financing_amount?: number
+          signature_url?: string | null
+          signature_user_agent?: string | null
+          signed_at?: string | null
+          state?: string | null
+          status?: string
+          total_annual_sales?: number | null
+          total_assets?: number | null
+          total_liabilities?: number | null
+          uid?: string | null
+          updated_at?: string
+          website?: string | null
+          year_established?: number | null
+          years_in_business?: number | null
+          zip_code?: string | null
+        }
+        Relationships: []
+      }
       documents: {
         Row: {
           converted_html: string
@@ -104,6 +396,7 @@ export type Database = {
         }
         Returns: boolean
       }
+      next_business_loan_application_number: { Args: never; Returns: string }
     }
     Enums: {
       app_role: "admin" | "moderator" | "user"
@@ -122,12 +415,12 @@ export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -151,11 +444,11 @@ export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -176,11 +469,11 @@ export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -201,11 +494,11 @@ export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
     | { schema: keyof DatabaseWithoutInternals },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -218,11 +511,11 @@ export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof DatabaseWithoutInternals },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never) = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
