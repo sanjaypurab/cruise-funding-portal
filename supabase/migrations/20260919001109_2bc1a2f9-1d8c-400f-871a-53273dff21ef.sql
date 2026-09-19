@@ -1,0 +1,14 @@
+ALTER TABLE public.applications ADD COLUMN IF NOT EXISTS applicant_user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL;
+GRANT SELECT, INSERT, UPDATE ON public.applications TO authenticated;
+GRANT ALL ON public.applications TO service_role;
+DROP POLICY IF EXISTS "Authorized staff can view applications" ON public.applications;
+CREATE POLICY "Applicants and authorized staff can view applications" ON public.applications FOR SELECT TO authenticated USING (applicant_user_id = auth.uid() OR public.has_role(auth.uid(), 'admin') OR public.has_role(auth.uid(), 'moderator'));
+DROP POLICY IF EXISTS "Authorized staff can update applications" ON public.applications;
+CREATE POLICY "Authorized staff can update applications" ON public.applications FOR UPDATE TO authenticated USING (public.has_role(auth.uid(), 'admin') OR public.has_role(auth.uid(), 'moderator')) WITH CHECK (public.has_role(auth.uid(), 'admin') OR public.has_role(auth.uid(), 'moderator'));
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.application_documents TO authenticated;
+GRANT ALL ON public.application_documents TO service_role;
+DROP POLICY IF EXISTS "Authorized staff can view application documents" ON public.application_documents;
+CREATE POLICY "Applicants and authorized staff can view application documents" ON public.application_documents FOR SELECT TO authenticated USING (EXISTS (SELECT 1 FROM public.applications a WHERE a.id = application_id AND (a.applicant_user_id = auth.uid() OR public.has_role(auth.uid(), 'admin') OR public.has_role(auth.uid(), 'moderator'))));
+DROP POLICY IF EXISTS "Authorized staff can manage application documents" ON public.application_documents;
+CREATE POLICY "Authorized staff can manage application documents" ON public.application_documents FOR ALL TO authenticated USING (public.has_role(auth.uid(), 'admin')) WITH CHECK (public.has_role(auth.uid(), 'admin'));
+CREATE INDEX IF NOT EXISTS applications_applicant_user_id_idx ON public.applications(applicant_user_id);
