@@ -96,6 +96,7 @@ export type Database = {
           address: string | null
           annual_turnover: number | null
           applicant_email: string | null
+          applicant_user_id: string | null
           application_number: string
           approximate_equity: number | null
           bank_statement_availability: string | null
@@ -167,6 +168,7 @@ export type Database = {
           address?: string | null
           annual_turnover?: number | null
           applicant_email?: string | null
+          applicant_user_id?: string | null
           application_number: string
           approximate_equity?: number | null
           bank_statement_availability?: string | null
@@ -238,6 +240,7 @@ export type Database = {
           address?: string | null
           annual_turnover?: number | null
           applicant_email?: string | null
+          applicant_user_id?: string | null
           application_number?: string
           approximate_equity?: number | null
           bank_statement_availability?: string | null
