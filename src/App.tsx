@@ -17,6 +17,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import BusinessLoanApplication from "./pages/BusinessLoanApplication";
+import AdminApplications from "./pages/AdminApplications";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/services" element={<Layout><Services /></Layout>} />
           <Route path="/application" element={<Layout><Application /></Layout>} />
           <Route path="/business-loan-application" element={<Layout><BusinessLoanApplication /></Layout>} />
+          <Route path="/admin/applications" element={<Layout><AdminApplications /></Layout>} />
           <Route path="/faq" element={<Layout><Faq /></Layout>} />
           <Route path="/blog" element={<Layout><Blog /></Layout>} />
           <Route path="/blog/:id" element={<Layout><BlogPost /></Layout>} />
