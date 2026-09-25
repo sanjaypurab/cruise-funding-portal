@@ -12,7 +12,7 @@ import { downloadLoanPdf } from '@/lib/businessLoanPdf';
 type Application = Record<string, unknown> & { id: string; application_number: string; status: string; owner_name: string; company_name?: string | null; requested_financing_amount: number; created_at: string; internal_notes?: string | null };
 type Document = { id: string; original_name: string; storage_path: string; file_size: number; mime_type: string };
 const statuses = ['submitted', 'under_review', 'documents_required', 'processing', 'approved', 'declined', 'withdrawn', 'completed'];
-const statusLabel = (status: string) => status.replaceAll('_', ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
+const statusLabel = (status: string) => status.replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 const money = (amount: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount || 0);
 
 const AdminApplications: React.FC = () => {
