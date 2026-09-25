@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import logoUrl from '@/assets/logo.png';
 const Footer: React.FC = () => {
   return <footer className="bg-cruise-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              <span className="text-cruise-400">Cruise</span>World
-            </h3>
+            <img
+              src={logoUrl}
+              alt="Cruise World International Limited"
+              className="h-14 w-auto mb-4"
+            />
             <p className="text-gray-300 mb-4">
               Global investment funding solutions with a personal touch. Building financial futures together.
             </p>
