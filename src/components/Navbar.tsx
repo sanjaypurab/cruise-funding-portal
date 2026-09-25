@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import logoAsset from '@/assets/logo.png.asset.json';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -45,10 +46,12 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-bold tracking-tight text-cruise-900">
-              <span className="text-cruise-500">Cruise</span>World
-            </h1>
+          <Link to="/" className="flex items-center" aria-label="Cruise World International Limited — Home">
+            <img
+              src={logoAsset.url}
+              alt="Cruise World International Limited"
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
