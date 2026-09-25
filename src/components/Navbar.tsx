@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import logoAsset from '@/assets/logo.png.asset.json';
+import logoUrl from '@/assets/logo.png';
 
 const navLinks = [
   { name: 'Home', path: '/' },

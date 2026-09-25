@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logoAsset from '@/assets/logo.png.asset.json';
+import logoUrl from '@/assets/logo.png';
 const Footer: React.FC = () => {
   return <footer className="bg-cruise-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
