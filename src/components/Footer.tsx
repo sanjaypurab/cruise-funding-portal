@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="Cruise World International Limited"
               className="h-14 w-auto mb-4"
             />
