@@ -8,11 +8,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
-            <img
-              src={logoUrl}
-              alt="Cruise World International Limited"
-              className="h-14 w-auto mb-4"
-            />
+            <h3 className="text-2xl font-bold mb-4">
+              <span className="text-cruise-500">Cruise</span>
+              <span className="text-white">World</span>
+            </h3>
             <p className="text-gray-300 mb-4">
               Global investment funding solutions with a personal touch. Building financial futures together.
             </p>
