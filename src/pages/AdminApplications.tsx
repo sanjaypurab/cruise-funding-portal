@@ -66,6 +66,18 @@ const AdminApplications: React.FC = () => {
     setPassword('');
   };
 
+  const changePassword = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (newPassword.length < 8) { toast({ title: 'Password too short', description: 'Use at least 8 characters.', variant: 'destructive' }); return; }
+    if (newPassword !== confirmPassword) { toast({ title: 'Passwords do not match', description: 'Re-enter the same password in both fields.', variant: 'destructive' }); return; }
+    setChangingPassword(true);
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    setChangingPassword(false);
+    if (error) { toast({ title: 'Could not change password', description: error.message, variant: 'destructive' }); return; }
+    setNewPassword(''); setConfirmPassword(''); setShowChangePassword(false);
+    toast({ title: 'Password updated', description: 'Use your new password the next time you sign in.' });
+  };
+
   const openApplication = async (application: Application) => {
     setSelected(application); setNotes(application.internal_notes ?? '');
     try { const result = await call({ action: 'detail', applicationId: application.id }); setSelected(result.application); setDocuments(result.documents ?? []); setNotes(result.application.internal_notes ?? ''); }
