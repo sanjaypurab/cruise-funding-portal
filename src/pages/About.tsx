@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ChevronRight, GlobeIcon, BriefcaseIcon, UsersIcon, TrendingUpIcon } from 'lucide-react';
+import ceoPhoto from '@/assets/ceo-ahmed-murad-al-balushi.jpg';
 
 const About: React.FC = () => {
   return (
@@ -121,16 +122,16 @@ const About: React.FC = () => {
             <div className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80" 
-                  alt="Ahmed Al-Maamari" 
-                  className="w-full h-full object-cover"
+                  src={ceoPhoto} 
+                  alt="Dr. Ahmed Murad Al Balushi" 
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">Ahmed Al-Maamari</h3>
+                <h3 className="text-xl font-semibold mb-1">Dr. Ahmed Murad Al Balushi</h3>
                 <p className="text-cruise-600 mb-4">Chief Executive Officer</p>
                 <p className="text-gray-600">
-                  With over 20 years of experience in finance and investments, Ahmed leads our global strategy and operations.
+                  With over 20 years of experience in finance and investments, Dr. Al Balushi leads our global strategy and operations.
                 </p>
               </div>
             </div>
