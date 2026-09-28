@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { 
   DollarSign, 
@@ -14,6 +14,21 @@ import {
 } from 'lucide-react';
 
 const Services: React.FC = () => {
+  const location = useLocation();
+
+  // Scroll to the section when arriving with a #anchor (e.g. from the Services dropdown)
+  React.useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.slice(1));
+      if (el) {
+        // Wait a tick so the section has rendered
+        requestAnimationFrame(() => el.scrollIntoView({ behavior: 'smooth' }));
+        return;
+      }
+    }
+    window.scrollTo({ top: 0 });
+  }, [location.pathname, location.hash]);
+
   return (
     <div className="py-12">
       {/* Hero Section */}
