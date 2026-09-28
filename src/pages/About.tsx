@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ChevronRight, GlobeIcon, BriefcaseIcon, UsersIcon, TrendingUpIcon } from 'lucide-react';
 import ceoPhoto from '@/assets/ceo-ahmed-murad-al-balushi.jpg';
+import cioPhoto from '@/assets/victoria-b-al-khan.jpg';
 
 const About: React.FC = () => {
   return (
@@ -139,16 +140,16 @@ const About: React.FC = () => {
             <div className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=988&q=80" 
-                  alt="Sarah Johnson" 
-                  className="w-full h-full object-cover"
+                  src={cioPhoto} 
+                  alt="Mrs. Victoria B. Al Khan" 
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">Sarah Johnson</h3>
+                <h3 className="text-xl font-semibold mb-1">Mrs. Victoria B. Al Khan</h3>
                 <p className="text-cruise-600 mb-4">Chief Investment Officer</p>
                 <p className="text-gray-600">
-                  Sarah oversees our investment portfolios and leads our team of analysts in identifying new opportunities.
+                  Mrs. Victoria oversees our investment portfolios and leads our team of analysts in identifying new opportunities.
                 </p>
               </div>
             </div>
