@@ -158,16 +158,16 @@ const About: React.FC = () => {
             <div className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                  alt="Mehmet Yilmaz" 
-                  className="w-full h-full object-cover"
+                  src={directorPhoto} 
+                  alt="Mr. Metin Ahmet ÖZDEMİR" 
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-1">Mehmet Yilmaz</h3>
+                <h3 className="text-xl font-semibold mb-1">Mr. Metin Ahmet ÖZDEMİR</h3>
                 <p className="text-cruise-600 mb-4">Director, Turkish Operations</p>
                 <p className="text-gray-600">
-                  Mehmet manages our expansion in Turkey and surrounding regions, bringing local expertise to our global vision.
+                  ÖZDEMİR manages our expansion in Turkey and surrounding regions, bringing local expertise to our global vision.
                 </p>
               </div>
             </div>
