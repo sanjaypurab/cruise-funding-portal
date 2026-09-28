@@ -15,6 +15,7 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import InvestmentFinancing from "./pages/InvestmentFinancing";
 import BusinessLoanApplication from "./pages/BusinessLoanApplication";
 import AdminApplications from "./pages/AdminApplications";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/" element={<Layout><Index /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
           <Route path="/services" element={<Layout><Services /></Layout>} />
+          <Route path="/investment-financing" element={<Layout><InvestmentFinancing /></Layout>} />
           <Route path="/application" element={<Navigate to="/business-loan-application" replace />} />
           <Route path="/business-loan-application" element={<Layout><BusinessLoanApplication /></Layout>} />
           <Route path="/admin/applications" element={<Layout><AdminApplications /></Layout>} />

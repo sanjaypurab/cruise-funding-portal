@@ -4,16 +4,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
-  Building2,
-  ShieldCheck,
   FileCheck,
   ClipboardList,
-  Search,
-  Landmark,
   Scale,
-  FolderSearch,
   BadgeCheck,
-  Globe,
   CheckCircle,
   TrendingUp,
 } from 'lucide-react';
