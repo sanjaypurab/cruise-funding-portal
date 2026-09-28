@@ -25,9 +25,24 @@ const ContactInfo: React.FC = () => {
             <MapPin className="h-5 w-5 text-cruise-500" />
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-1">Oman Headquarters</h3>
+            <h3 className="text-lg font-medium mb-1">United Arab Emirate - Dubai Office</h3>
+            <p className="text-gray-600 mb-1">Cruise World / Mak Broker Team</p>
             <address className="text-gray-600 not-italic">
-              Cruise World International Limited (HO)<br />
+              Park Place Tower, Office 1003, World Trade Center<br />
+              Sheikh Zayed Rd - Dubai<br />
+              United Arab Emirate
+            </address>
+          </div>
+        </div>
+        
+        <div className="flex items-start">
+          <div className="w-10 h-10 rounded-full bg-cruise-50 flex items-center justify-center mr-4 flex-shrink-0">
+            <MapPin className="h-5 w-5 text-cruise-500" />
+          </div>
+          <div>
+            <h3 className="text-lg font-medium mb-1">Sultanate of Oman Office</h3>
+            <p className="text-gray-600 mb-1">Cruise World / Mak Broker Team</p>
+            <address className="text-gray-600 not-italic">
               25 5th Floor Office 502 Dohat Al Adab St.<br />
               AL Khuwair, Muscat, Oman<br />
               Sultanate of Oman
@@ -56,10 +71,12 @@ const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h3 className="text-lg font-medium mb-1">Business Hours</h3>
-            <p className="text-gray-600 mb-1">Monday - Friday:</p>
+            <p className="text-gray-600 mb-1">Monday - Thursday:</p>
             <p className="text-cruise-600">9:00 AM - 5:00 PM</p>
+            <p className="text-gray-600 mt-2 mb-1">Friday:</p>
+            <p className="text-cruise-600">9:00 AM to Mid-Day (UAE and Oman Office Only)</p>
             <p className="text-gray-600 mt-2 mb-1">Saturday:</p>
-            <p className="text-cruise-600">9:00 AM - 1:00 PM (Oman office only)</p>
+            <p className="text-cruise-600">9:00 AM - 1:00 PM</p>
           </div>
         </div>
       </div>
