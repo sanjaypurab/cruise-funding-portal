@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ChevronRight, GlobeIcon, BriefcaseIcon, UsersIcon, TrendingUpIcon } from 'lucide-react';
+import ceoPhoto from '@/assets/ceo-ahmed-murad-al-balushi.jpg';
 
 const About: React.FC = () => {
   return (
