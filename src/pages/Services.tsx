@@ -112,8 +112,8 @@ const Services: React.FC = () => {
               </div>
               
               <Button asChild className="group">
-                <Link to="/application">
-                  Explore Investment Funding
+                <Link to="/investment-financing">
+                  Explore Investment Financing
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
