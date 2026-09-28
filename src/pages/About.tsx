@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, GlobeIcon, BriefcaseIcon, UsersIcon, TrendingUpIcon } from 'lucide-react';
 import ceoPhoto from '@/assets/ceo-ahmed-murad-al-balushi.jpg';
 import cioPhoto from '@/assets/victoria-b-al-khan.jpg';
+import directorPhoto from '@/assets/metin-ahmet-ozdemir.jpg';
 
 const About: React.FC = () => {
   return (
