@@ -90,9 +90,21 @@ const Footer: React.FC = () => {
               <li className="flex">
                 <MapPin className="mr-2 h-5 w-5 text-cruise-400 flex-shrink-0 mt-1" />
                 <div>
-                  <p className="text-white">Oman Headquarters</p>
+                  <p className="text-white">United Arab Emirate - Dubai Office</p>
                   <address className="text-gray-300 not-italic">
-                    Cruise World International Limited (HO)<br />
+                    Cruise World / Mak Broker Team<br />
+                    Park Place Tower, Office 1003, World Trade Center<br />
+                    Sheikh Zayed Rd - Dubai<br />
+                    United Arab Emirate
+                  </address>
+                </div>
+              </li>
+              <li className="flex">
+                <MapPin className="mr-2 h-5 w-5 text-cruise-400 flex-shrink-0 mt-1" />
+                <div>
+                  <p className="text-white">Sultanate of Oman Office</p>
+                  <address className="text-gray-300 not-italic">
+                    Cruise World / Mak Broker Team<br />
                     25 5th Floor Office 502 Dohat Al Adab St.<br />
                     AL Khuwair, Muscat, Oman<br />
                     Sultanate of Oman
@@ -111,7 +123,7 @@ const Footer: React.FC = () => {
                   </address>
                 </div>
               </li>
-              
+
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-cruise-400" />
                 <p className="text-gray-300">info@cruiseworldinterltd.com</p>
