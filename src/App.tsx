@@ -18,6 +18,7 @@ import Terms from "./pages/Terms";
 import InvestmentFinancing from "./pages/InvestmentFinancing";
 import BusinessLoanApplication from "./pages/BusinessLoanApplication";
 import AdminApplications from "./pages/AdminApplications";
+import ServiceDetailPage from "./components/ServiceDetailPage";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,12 @@ const App = () => (
           <Route path="/" element={<Layout><Index /></Layout>} />
           <Route path="/about" element={<Layout><About /></Layout>} />
           <Route path="/services" element={<Layout><Services /></Layout>} />
+          <Route path="/business-loans" element={<Layout><ServiceDetailPage serviceKey="business-loans" /></Layout>} />
           <Route path="/investment-financing" element={<Layout><InvestmentFinancing /></Layout>} />
+          <Route path="/venture-capital" element={<Layout><ServiceDetailPage serviceKey="venture-capital" /></Layout>} />
+          <Route path="/equity-investments" element={<Layout><ServiceDetailPage serviceKey="equity-investments" /></Layout>} />
+          <Route path="/project-financing" element={<Layout><ServiceDetailPage serviceKey="project-financing" /></Layout>} />
+          <Route path="/international-funding" element={<Layout><ServiceDetailPage serviceKey="international-funding" /></Layout>} />
           <Route path="/application" element={<Navigate to="/business-loan-application" replace />} />
           <Route path="/business-loan-application" element={<Layout><BusinessLoanApplication /></Layout>} />
           <Route path="/admin/applications" element={<Layout><AdminApplications /></Layout>} />
