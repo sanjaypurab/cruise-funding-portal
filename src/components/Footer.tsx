@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import logoUrl from '@/assets/logo.png';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, MapPin } from 'lucide-react';
 const Footer: React.FC = () => {
   return <footer className="bg-cruise-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -61,7 +60,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Business Loans</Link>
+                <Link to="/business-loans" className="text-gray-300 hover:text-white transition-colors">Business Loans</Link>
               </li>
               <li>
                 <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Investment Funding</Link>
@@ -70,13 +69,16 @@ const Footer: React.FC = () => {
                 <Link to="/investment-financing" className="text-gray-300 hover:text-white transition-colors">Investment Financing</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Venture Capital</Link>
+                <Link to="/venture-capital" className="text-gray-300 hover:text-white transition-colors">Venture Capital</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Equity Investments</Link>
+                <Link to="/equity-investments" className="text-gray-300 hover:text-white transition-colors">Equity Investments</Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">Financial Consulting</Link>
+                <Link to="/project-financing" className="text-gray-300 hover:text-white transition-colors">Project Financing</Link>
+              </li>
+              <li>
+                <Link to="/international-funding" className="text-gray-300 hover:text-white transition-colors">International Funding</Link>
               </li>
             </ul>
           </div>

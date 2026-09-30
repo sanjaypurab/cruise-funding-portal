@@ -16,13 +16,13 @@ const navLinks = [
 
 const serviceLinks = [
   { name: 'All Services', path: '/services' },
-  { name: 'Business Loans', path: '/services#business-loans' },
+  { name: 'Business Loans', path: '/business-loans' },
   { name: 'Investment Funding', path: '/services#investment-funding' },
   { name: 'Investment Financing', path: '/investment-financing' },
-  { name: 'Venture Capital', path: '/services#venture-capital' },
-  { name: 'Equity Investments', path: '/services#equity-investments' },
-  { name: 'Project Financing', path: '/services#project-financing' },
-  { name: 'International Funding', path: '/services#international-funding' },
+  { name: 'Venture Capital', path: '/venture-capital' },
+  { name: 'Equity Investments', path: '/equity-investments' },
+  { name: 'Project Financing', path: '/project-financing' },
+  { name: 'International Funding', path: '/international-funding' },
 ];
 
 const Navbar: React.FC = () => {
@@ -48,8 +48,8 @@ const Navbar: React.FC = () => {
     setMobileServicesOpen(false);
   }, [location.pathname, location.hash]);
 
-  const isServicesActive =
-    location.pathname === '/services' || location.pathname === '/investment-financing';
+  const servicePaths = serviceLinks.map((link) => link.path.split('#')[0]);
+  const isServicesActive = servicePaths.includes(location.pathname);
 
   return (
     <header

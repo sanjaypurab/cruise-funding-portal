@@ -72,8 +72,8 @@ const Services: React.FC = () => {
               </div>
               
               <Button asChild className="group">
-                <Link to="/application">
-                  Apply for a Business Loan
+                <Link to="/business-loans">
+                   Explore Business Loans
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
@@ -168,8 +168,8 @@ const Services: React.FC = () => {
               </div>
               
               <Button asChild className="group">
-                <Link to="/application">
-                  Pitch Your Startup
+                <Link to="/venture-capital">
+                   Explore Venture Capital
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
@@ -195,7 +195,7 @@ const Services: React.FC = () => {
               Long-term partnership through equity investments to provide capital and strategic support for established businesses looking to expand.
             </p>
             <Link 
-              to="/application" 
+              to="/equity-investments" 
               className="inline-flex items-center text-cruise-600 font-medium hover:text-cruise-700"
             >
               Learn More
@@ -212,7 +212,7 @@ const Services: React.FC = () => {
               Specialized funding solutions for large-scale projects across various industries, including infrastructure, real estate, and energy.
             </p>
             <Link 
-              to="/application" 
+              to="/project-financing" 
               className="inline-flex items-center text-cruise-600 font-medium hover:text-cruise-700"
             >
               Learn More
@@ -229,7 +229,7 @@ const Services: React.FC = () => {
               Cross-border investment solutions with expertise in Middle Eastern and Turkish markets, helping businesses expand internationally.
             </p>
             <Link 
-              to="/application" 
+              to="/international-funding" 
               className="inline-flex items-center text-cruise-600 font-medium hover:text-cruise-700"
             >
               Learn More
