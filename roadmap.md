@@ -7,4 +7,4 @@
 - [x] Add the uploaded About Us content to the About page.
 - [x] Add dedicated Business Loan, Project Financing, International Funding, Venture Capital, and Equity Investment pages.
 - [x] Connect service menus, summaries, calls to action, and routes to the new pages.
-- [ ] Verify the expanded content on desktop and mobile.
+- [x] Verify the expanded content on desktop and mobile.
