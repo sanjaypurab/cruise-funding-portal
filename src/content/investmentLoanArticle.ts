@@ -1,167 +1,305 @@
-export const investmentLoanArticle = `
-<h2>01 — PROJECT VIABILITY</h2>
-<p><strong>Is the project commercially investable?</strong></p>
-<p>The foundation of every financing application is the underlying project.</p>
-<p>Our assessment considers the project's:</p>
-<ul>
-<li>Business model</li>
-<li>Market opportunity</li>
-<li>Revenue potential</li>
-<li>Development stage</li>
-<li>Capital requirements</li>
-<li>Financial projections</li>
-<li>Management capability</li>
-<li>Commercial contracts</li>
-<li>Expected returns</li>
-<li>Repayment strategy</li>
-<li>Industry and jurisdictional considerations</li>
-</ul>
-<p>A compelling project must demonstrate a clear purpose for the requested capital and a credible pathway toward revenue generation and repayment.</p>
-<h2>02 — FINANCIAL CAPACITY</h2>
-<p><strong>Can the proposed financing be supported by the project's financial structure?</strong></p>
-<p>Financing consideration may include an assessment of:</p>
-<ul>
-<li>Existing financial statements</li>
-<li>Historical business performance</li>
-<li>Projected cash flow</li>
-<li>Existing obligations</li>
-<li>Assets and liabilities</li>
-<li>Equity contribution</li>
-<li>Sources of repayment</li>
-<li>Requested financing amount</li>
-<li>Proposed financing term</li>
-</ul>
-<p>The objective is to establish whether the proposed financing requirement is consistent with the project's scale, financial capacity and commercial objectives.</p>
-<h2>03 — SPV / SPE STRUCTURE</h2>
-<p><strong>THE FOUNDATION OF THE FINANCING STRUCTURE</strong></p>
-<p>For transactions where an <strong>SPV/SPE is required</strong>, establishing the appropriate Special Purpose Vehicle or Special Purpose Entity is a fundamental part of preparing the transaction for financing consideration.</p>
-<p><strong>Why an SPV/SPE?</strong></p>
-<p>An appropriately structured SPV/SPE can provide a dedicated corporate framework for the investment transaction.</p>
-<p>Depending on the transaction, it may be used to:</p>
-<p><strong>Receive</strong><br />
-Approved investment or financing proceeds through a designated corporate structure.</p>
-<p><strong>Separate</strong><br />
-The financed project from unrelated business activities.</p>
-<p><strong>Control</strong><br />
-The permitted use and administration of investment proceeds.</p>
-<p><strong>Protect</strong><br />
-The interests of the relevant parties through defined contractual and corporate arrangements.</p>
-<p><strong>Monitor</strong><br />
-Project cash flows, reporting obligations and financing activities.</p>
-<p><strong>Document</strong><br />
-Ownership, signing authority, repayment obligations and investment rights.</p>
-<p><strong>SPV/SPE = STRUCTURE + CONTROL + TRANSPARENCY</strong></p>
-<p>The SPV/SPE is not simply another company registration.</p>
-<p>It is intended to provide the <strong>legal and operational framework through which the proposed investment transaction can be administered and monitored.</strong></p>
-<p>Where required, satisfactory establishment and verification of the SPV/SPE forms part of the conditions that must be completed before a transaction can progress toward funding.</p>
-<p><strong>Important:</strong> Establishment of an SPV/SPE does not constitute a guarantee of financing approval. Financing remains subject to due diligence, compliance, documentation, financing terms and approval by the relevant financing party.</p>
-<h2>04 — DUE DILIGENCE &amp; COMPLIANCE</h2>
-<p><strong>Transparency Comes Before Funding</strong></p>
-<p>Every serious financing transaction requires appropriate verification.</p>
-<p>Applicants may be required to provide:</p>
-<ul>
-<li>Certificate of incorporation</li>
-<li>Corporate registration documents</li>
-<li>Directors' identification</li>
-<li>Beneficial ownership information</li>
-<li>Proof of business address</li>
-<li>Corporate constitutional documents</li>
-<li>Financial statements</li>
-<li>Project documentation</li>
-<li>Commercial agreements</li>
-<li>Licenses and permits where applicable</li>
-<li>Banking information</li>
-<li>Source-of-funds information where applicable</li>
-<li>Additional KYC/AML documentation</li>
-</ul>
-<p>Our objective is to ensure that the proposed transaction can be properly identified, documented and assessed before it proceeds further.</p>
-<h2>05 — TRANSACTION READINESS</h2>
-<p><strong>APPROVAL REQUIRES MORE THAN AN APPLICATION</strong></p>
-<p>A financing opportunity must be properly structured before it can move toward execution.</p>
-<p>A transaction may therefore progress through:</p>
-<p><strong>APPLICATION</strong></p>
-<p>Submission of the financing request and initial project information.</p>
-<p>↓</p>
-<p><strong>PRELIMINARY ASSESSMENT</strong></p>
-<p>Review of the applicant, project and proposed financing requirement.</p>
-<p>↓</p>
-<p><strong>DUE DILIGENCE</strong></p>
-<p>Corporate, financial, ownership and project verification.</p>
-<p>↓</p>
-<p><strong>SPV / SPE FORMATION</strong></p>
-<p>Establishment of the appropriate investment vehicle where required.</p>
-<p>↓</p>
-<p><strong>STRUCTURING</strong></p>
-<p>Development of the financing, investment, security and repayment framework.</p>
-<p>↓</p>
-<p><strong>DOCUMENTATION</strong></p>
-<p>Completion and execution of required agreements and corporate documents.</p>
-<p>↓</p>
-<p><strong>FINAL FINANCING REVIEW</strong></p>
-<p>Submission for consideration by the relevant financing party.</p>
-<p>↓</p>
-<p><strong>FUNDING</strong></p>
-<p>Subject to satisfaction of all applicable conditions precedent and execution of the final agreements.</p>
-<h2>WHY CHOOSE A STRUCTURED FINANCING APPROACH?</h2>
-<p><strong>Because Serious Capital Requires Serious Preparation.</strong></p>
-<p>A financing request supported by a properly structured company, identifiable project, documented use of funds and appropriate SPV/SPE framework can provide a clearer basis for professional financing assessment.</p>
-<p>Our approach is built around five principles:</p>
-<p><strong>PROJECT</strong></p>
-<p>A clearly defined commercial opportunity.</p>
-<p><strong>STRUCTURE</strong></p>
-<p>An appropriate corporate and investment framework.</p>
-<p><strong>DUE DILIGENCE</strong></p>
-<p>Verification of the applicant, ownership and transaction.</p>
-<p><strong>PROTECTION</strong></p>
-<p>Defined contractual and corporate arrangements.</p>
-<p><strong>READINESS</strong></p>
-<p>A transaction prepared for financing consideration.</p>
-<h2>WHO CAN APPLY?</h2>
-<p>Investment-financing opportunities may be considered for:</p>
-<ul>
-<li>Established businesses</li>
-<li>Entrepreneurs</li>
-<li>Project developers</li>
-<li>Infrastructure projects</li>
-<li>Construction projects</li>
-<li>Energy projects</li>
-<li>Real estate developments</li>
-<li>Industrial projects</li>
-<li>Transportation projects</li>
-<li>Technology ventures</li>
-<li>Healthcare projects</li>
-<li>Alternative investments</li>
-<li>Other commercially viable investment opportunities</li>
-</ul>
-<p>Each application is considered according to its individual circumstances, financing requirement, jurisdiction, project structure and applicable eligibility criteria.</p>
-<h2>YOUR CAPITAL REQUIREMENT DESERVES A STRUCTURE</h2>
-<p>Whether you are developing a new project, expanding an existing business or seeking capital for a major investment opportunity, the first question is not simply:</p>
-<p><strong>“How much financing do you need?”</strong></p>
-<p>The more important questions are:</p>
-<p><strong>What is the project?</strong></p>
-<p><strong>How will the capital be used?</strong></p>
-<p><strong>What entity will receive and administer the investment?</strong></p>
-<p><strong>How will the investment be protected and monitored?</strong></p>
-<p><strong>How will repayment be generated?</strong></p>
-<p><strong>Is the transaction properly structured for financing consideration?</strong></p>
-<p>This is where <strong>SPV/SPE structuring, due diligence and transaction preparation</strong> become critical.</p>
-<h2>START YOUR FINANCING APPLICATION</h2>
-<p><strong>Present Your Project. Build the Structure. Prepare for Financing Consideration.</strong></p>
-<p><strong>Cruise World International Mediation Financing Broker :-</strong> We work with applicants to develop financing proposals into properly documented and structured transactions suitable for consideration by relevant financing parties.</p>
-<h2>SUBMIT YOUR PROJECT FOR INITIAL ASSESSMENT</h2>
-<p><strong>Required initial information may include:</strong></p>
-<ul>
-<li>Company profile</li>
-<li>Project description</li>
-<li>Requested financing amount</li>
-<li>Intended use of funds</li>
-<li>Business plan or feasibility study</li>
-<li>Financial projections</li>
-<li>Corporate registration documents</li>
-<li>Ownership information</li>
-<li>Existing financing obligations</li>
-<li>Proposed repayment strategy</li>
-</ul>
-<h2>FROM PROJECT CONCEPT TO FINANCING STRUCTURE</h2>
-<p><strong>Assessment → Due Diligence → SPV/SPE → Structuring → Documentation → Financing Consideration → Funding</strong></p>
-`;
+// Structured content for the "5 Key Factors That Determine Investment Loan Approval" article.
+// All copy is preserved verbatim from the original article document.
+
+export interface ArticleCallout {
+  label: string;
+  text: string;
+}
+
+export interface ArticleStage {
+  name: string;
+  description: string;
+}
+
+export interface ArticleSection {
+  number?: string;
+  title: string;
+  subtitle?: string;
+  lead?: string;
+  paragraphs?: string[];
+  paragraphsAfterList?: string[];
+  paragraphsAfterStatement?: string[];
+  paragraphsAfterQuote?: string[];
+  paragraphsAfterQuestions?: string[];
+  listIntro?: string;
+  list?: string[];
+  callouts?: ArticleCallout[];
+  statement?: string;
+  note?: string;
+  stages?: ArticleStage[];
+  principles?: ArticleCallout[];
+  questions?: string[];
+  quote?: string;
+  subTitle?: string;
+  closingFlow?: string[];
+}
+
+export const articleSections: ArticleSection[] = [
+  {
+    number: "01",
+    title: "Project Viability",
+    lead: "Is the project commercially investable?",
+    paragraphs: [
+      "The foundation of every financing application is the underlying project.",
+    ],
+    listIntro: "Our assessment considers the project's:",
+    list: [
+      "Business model",
+      "Market opportunity",
+      "Revenue potential",
+      "Development stage",
+      "Capital requirements",
+      "Financial projections",
+      "Management capability",
+      "Commercial contracts",
+      "Expected returns",
+      "Repayment strategy",
+      "Industry and jurisdictional considerations",
+    ],
+    paragraphsAfterList: [
+      "A compelling project must demonstrate a clear purpose for the requested capital and a credible pathway toward revenue generation and repayment.",
+    ],
+  },
+  {
+    number: "02",
+    title: "Financial Capacity",
+    lead: "Can the proposed financing be supported by the project's financial structure?",
+    paragraphs: ["Financing consideration may include an assessment of:"],
+    list: [
+      "Existing financial statements",
+      "Historical business performance",
+      "Projected cash flow",
+      "Existing obligations",
+      "Assets and liabilities",
+      "Equity contribution",
+      "Sources of repayment",
+      "Requested financing amount",
+      "Proposed financing term",
+    ],
+    paragraphsAfterList: [
+      "The objective is to establish whether the proposed financing requirement is consistent with the project's scale, financial capacity and commercial objectives.",
+    ],
+  },
+  {
+    number: "03",
+    title: "SPV / SPE Structure",
+    subtitle: "The foundation of the financing structure",
+    paragraphs: [
+      "For transactions where an SPV/SPE is required, establishing the appropriate Special Purpose Vehicle or Special Purpose Entity is a fundamental part of preparing the transaction for financing consideration.",
+    ],
+    listIntro:
+      "Why an SPV/SPE? An appropriately structured SPV/SPE can provide a dedicated corporate framework for the investment transaction. Depending on the transaction, it may be used to:",
+    callouts: [
+      {
+        label: "Receive",
+        text: "Approved investment or financing proceeds through a designated corporate structure.",
+      },
+      {
+        label: "Separate",
+        text: "The financed project from unrelated business activities.",
+      },
+      {
+        label: "Control",
+        text: "The permitted use and administration of investment proceeds.",
+      },
+      {
+        label: "Protect",
+        text: "The interests of the relevant parties through defined contractual and corporate arrangements.",
+      },
+      {
+        label: "Monitor",
+        text: "Project cash flows, reporting obligations and financing activities.",
+      },
+      {
+        label: "Document",
+        text: "Ownership, signing authority, repayment obligations and investment rights.",
+      },
+    ],
+    statement: "SPV/SPE = Structure + Control + Transparency",
+    paragraphsAfterStatement: [
+      "The SPV/SPE is not simply another company registration.",
+      "It is intended to provide the legal and operational framework through which the proposed investment transaction can be administered and monitored.",
+      "Where required, satisfactory establishment and verification of the SPV/SPE forms part of the conditions that must be completed before a transaction can progress toward funding.",
+    ],
+    note: "Important: Establishment of an SPV/SPE does not constitute a guarantee of financing approval. Financing remains subject to due diligence, compliance, documentation, financing terms and approval by the relevant financing party.",
+  },
+  {
+    number: "04",
+    title: "Due Diligence & Compliance",
+    subtitle: "Transparency comes before funding",
+    paragraphs: [
+      "Every serious financing transaction requires appropriate verification.",
+    ],
+    listIntro: "Applicants may be required to provide:",
+    list: [
+      "Certificate of incorporation",
+      "Corporate registration documents",
+      "Directors' identification",
+      "Beneficial ownership information",
+      "Proof of business address",
+      "Corporate constitutional documents",
+      "Financial statements",
+      "Project documentation",
+      "Commercial agreements",
+      "Licenses and permits where applicable",
+      "Banking information",
+      "Source-of-funds information where applicable",
+      "Additional KYC/AML documentation",
+    ],
+    paragraphsAfterList: [
+      "Our objective is to ensure that the proposed transaction can be properly identified, documented and assessed before it proceeds further.",
+    ],
+  },
+  {
+    number: "05",
+    title: "Transaction Readiness",
+    subtitle: "Approval requires more than an application",
+    paragraphs: [
+      "A financing opportunity must be properly structured before it can move toward execution.",
+      "A transaction may therefore progress through:",
+    ],
+    stages: [
+      {
+        name: "Application",
+        description:
+          "Submission of the financing request and initial project information.",
+      },
+      {
+        name: "Preliminary Assessment",
+        description:
+          "Review of the applicant, project and proposed financing requirement.",
+      },
+      {
+        name: "Due Diligence",
+        description:
+          "Corporate, financial, ownership and project verification.",
+      },
+      {
+        name: "SPV / SPE Formation",
+        description:
+          "Establishment of the appropriate investment vehicle where required.",
+      },
+      {
+        name: "Structuring",
+        description:
+          "Development of the financing, investment, security and repayment framework.",
+      },
+      {
+        name: "Documentation",
+        description:
+          "Completion and execution of required agreements and corporate documents.",
+      },
+      {
+        name: "Final Financing Review",
+        description:
+          "Submission for consideration by the relevant financing party.",
+      },
+      {
+        name: "Funding",
+        description:
+          "Subject to satisfaction of all applicable conditions precedent and execution of the final agreements.",
+      },
+    ],
+  },
+  {
+    title: "Why Choose a Structured Financing Approach?",
+    lead: "Because serious capital requires serious preparation.",
+    paragraphs: [
+      "A financing request supported by a properly structured company, identifiable project, documented use of funds and appropriate SPV/SPE framework can provide a clearer basis for professional financing assessment.",
+      "Our approach is built around five principles:",
+    ],
+    principles: [
+      { label: "Project", text: "A clearly defined commercial opportunity." },
+      {
+        label: "Structure",
+        text: "An appropriate corporate and investment framework.",
+      },
+      {
+        label: "Due Diligence",
+        text: "Verification of the applicant, ownership and transaction.",
+      },
+      {
+        label: "Protection",
+        text: "Defined contractual and corporate arrangements.",
+      },
+      {
+        label: "Readiness",
+        text: "A transaction prepared for financing consideration.",
+      },
+    ],
+  },
+  {
+    title: "Who Can Apply?",
+    paragraphs: ["Investment-financing opportunities may be considered for:"],
+    list: [
+      "Established businesses",
+      "Entrepreneurs",
+      "Project developers",
+      "Infrastructure projects",
+      "Construction projects",
+      "Energy projects",
+      "Real estate developments",
+      "Industrial projects",
+      "Transportation projects",
+      "Technology ventures",
+      "Healthcare projects",
+      "Alternative investments",
+      "Other commercially viable investment opportunities",
+    ],
+    paragraphsAfterList: [
+      "Each application is considered according to its individual circumstances, financing requirement, jurisdiction, project structure and applicable eligibility criteria.",
+    ],
+  },
+  {
+    title: "Your Capital Requirement Deserves a Structure",
+    paragraphs: [
+      "Whether you are developing a new project, expanding an existing business or seeking capital for a major investment opportunity, the first question is not simply:",
+    ],
+    quote: "How much financing do you need?",
+    paragraphsAfterQuote: ["The more important questions are:"],
+    questions: [
+      "What is the project?",
+      "How will the capital be used?",
+      "What entity will receive and administer the investment?",
+      "How will the investment be protected and monitored?",
+      "How will repayment be generated?",
+      "Is the transaction properly structured for financing consideration?",
+    ],
+    paragraphsAfterQuestions: [
+      "This is where SPV/SPE structuring, due diligence and transaction preparation become critical.",
+    ],
+  },
+  {
+    title: "Start Your Financing Application",
+    lead: "Present Your Project. Build the Structure. Prepare for Financing Consideration.",
+    paragraphs: [
+      "Cruise World International Mediation Financing Broker :- We work with applicants to develop financing proposals into properly documented and structured transactions suitable for consideration by relevant financing parties.",
+    ],
+    subTitle: "Submit Your Project for Initial Assessment",
+    listIntro: "Required initial information may include:",
+    list: [
+      "Company profile",
+      "Project description",
+      "Requested financing amount",
+      "Intended use of funds",
+      "Business plan or feasibility study",
+      "Financial projections",
+      "Corporate registration documents",
+      "Ownership information",
+      "Existing financing obligations",
+      "Proposed repayment strategy",
+    ],
+  },
+  {
+    title: "From Project Concept to Financing Structure",
+    closingFlow: [
+      "Assessment",
+      "Due Diligence",
+      "SPV/SPE",
+      "Structuring",
+      "Documentation",
+      "Financing Consideration",
+      "Funding",
+    ],
+  },
+];
