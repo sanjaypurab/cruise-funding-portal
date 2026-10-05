@@ -98,6 +98,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				heading: ['SF Pro Display', 'Inter', 'sans-serif'],
+				display: ['"Playfair Display"', 'Georgia', 'serif'],
 			},
 			keyframes: {
 				'accordion-down': {
