@@ -21,7 +21,7 @@ const blogPosts = [
     id: "1",
     title: "5 Key Factors That Determine Your Business Loan Approval",
     date: "June 12, 2023",
-    author: "Ahmed Al-Maamari",
+    author: "Dr. Ahmed Murad Al Balushi",
     authorImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80",
     authorRole: "Chief Executive Officer",
     category: "Business Loans",
@@ -309,7 +309,7 @@ const BlogPost: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-2">{post.author}</h3>
                     <p className="text-gray-600 mb-3">
-                      Ahmed Al-Maamari is the CEO of Cruise World International Limited with over 20 years of experience in finance and investments. He specializes in business funding strategies and international market expansion.
+                      Dr. Ahmed Murad Al Balushi is the CEO of Cruise World International Limited with over 20 years of experience in finance and investments. He specializes in business funding strategies and international market expansion.
                     </p>
                     <div className="flex space-x-2">
                       <a href="#" className="text-cruise-600 hover:text-cruise-700">
