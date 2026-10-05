@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import businessLoansImg from '@/assets/services/business-loans.jpg';
+import ventureCapitalImg from '@/assets/services/venture-capital.jpg';
 import { Button } from '@/components/ui/button';
 import { 
   DollarSign, 
@@ -80,7 +82,7 @@ const Services: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1622782914767-404fb9ab3437?ixlib=rb-4.0.3&auto=format&fit=crop&w=2064&q=80" 
+                src={businessLoansImg} 
                 alt="Business Loans" 
                 className="rounded-xl shadow-lg"
               />
@@ -176,7 +178,7 @@ const Services: React.FC = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581091878591-4f0714c6f36f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                src={ventureCapitalImg} 
                 alt="Venture Capital" 
                 className="rounded-xl shadow-lg"
               />
