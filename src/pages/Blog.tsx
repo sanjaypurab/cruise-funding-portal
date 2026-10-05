@@ -14,13 +14,13 @@ import { Input } from '@/components/ui/input';
 const blogPosts = [
   {
     id: 1,
-    title: "5 Key Factors That Determine Your Business Loan Approval",
-    excerpt: "Understanding what lenders look for when reviewing business loan applications can significantly improve your chances of securing funding. In this article, we explore the five critical factors that influence loan approval decisions.",
+    title: "5 Key Factors That Determine Investment Loan Approval",
+    excerpt: "Explore the five foundations of investment loan approval: project viability, financial capacity, SPV/SPE structure, due diligence and compliance, and transaction readiness.",
     date: "June 12, 2023",
     author: "Dr. Ahmed Murad Al Balushi",
-    category: "Business Loans",
+    category: "Investment Financing",
     image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Funding", "Business Loans", "Finance"]
+    tags: ["Investment Financing", "SPV/SPE", "Due Diligence"]
   },
   {
     id: 2,

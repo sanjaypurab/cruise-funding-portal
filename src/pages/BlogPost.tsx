@@ -15,111 +15,20 @@ import {
   MessageCircle 
 } from 'lucide-react';
 import { useToast } from '@/components/ui/use-toast';
+import { investmentLoanArticle } from '@/content/investmentLoanArticle';
 
 const blogPosts = [
   {
     id: "1",
-    title: "5 Key Factors That Determine Your Business Loan Approval",
+    title: "5 Key Factors That Determine Investment Loan Approval",
     date: "June 12, 2023",
     author: "Dr. Ahmed Murad Al Balushi",
     authorImage: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80",
     authorRole: "Chief Executive Officer",
-    category: "Business Loans",
+    category: "Investment Financing",
     featuredImage: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    tags: ["Funding", "Business Loans", "Finance"],
-    content: `
-      <p class="lead">Understanding what lenders look for when reviewing business loan applications can significantly improve your chances of securing funding. In this article, we explore the five critical factors that influence loan approval decisions.</p>
-      
-      <p>Securing a business loan can be a pivotal moment for your company's growth trajectory. Whether you're looking to expand operations, invest in new equipment, or manage cash flow, understanding the key factors that lenders evaluate can make the difference between approval and rejection.</p>
-      
-      <h2>1. Credit History and Score</h2>
-      
-      <p>Your credit history is one of the first elements lenders will scrutinize. This includes both your personal credit score (especially for small business owners) and your business credit profile if established.</p>
-      
-      <p>Lenders view your credit history as an indicator of how you've managed financial obligations in the past and, by extension, how you're likely to handle them in the future. A strong credit score demonstrates reliability and reduces perceived risk.</p>
-      
-      <ul>
-        <li>Personal credit scores typically need to be 650+ for traditional bank loans</li>
-        <li>Business credit profiles are assessed through agencies like Dun & Bradstreet, Equifax Business, and Experian Business</li>
-        <li>Late payments, defaults, or bankruptcies can significantly impact approval chances</li>
-      </ul>
-      
-      <p>If your credit score isn't ideal, consider working to improve it before applying, or look into alternative lending options that place less emphasis on credit scores.</p>
-      
-      <h2>2. Cash Flow and Financial Health</h2>
-      
-      <p>Lenders need assurance that your business generates sufficient cash flow to service debt while maintaining operations. They'll analyze financial statements including:</p>
-      
-      <ul>
-        <li>Income statements</li>
-        <li>Balance sheets</li>
-        <li>Cash flow statements</li>
-        <li>Accounts receivable and payable aging reports</li>
-      </ul>
-      
-      <p>A healthy debt-to-income ratio is crucial. Most lenders prefer this ratio to be below 43%, meaning your total monthly debt payments shouldn't exceed 43% of your monthly income.</p>
-      
-      <blockquote>
-        <p>"Cash flow is the lifeblood of any business. Without a clear demonstration that you can generate consistent positive cash flow, lenders will be hesitant to extend credit, regardless of other strengths in your application."</p>
-      </blockquote>
-      
-      <h2>3. Business Plan and Purpose of Loan</h2>
-      
-      <p>Articulating a clear, compelling reason for seeking funding is essential. Lenders want to see that you have a strategic plan for using the loan that will strengthen your business and enhance your ability to repay.</p>
-      
-      <p>Your business plan should include:</p>
-      
-      <ul>
-        <li>Executive summary</li>
-        <li>Company description</li>
-        <li>Market analysis</li>
-        <li>Organization and management structure</li>
-        <li>Service or product line</li>
-        <li>Marketing and sales strategy</li>
-        <li>Financial projections</li>
-      </ul>
-      
-      <p>When explaining the loan purpose, be specific about how the funds will be used and how they'll contribute to growth or increased profitability.</p>
-      
-      <h2>4. Collateral and Guarantees</h2>
-      
-      <p>Many business loans require collateral—assets that the lender can claim if you default on the loan. Common forms of collateral include:</p>
-      
-      <ul>
-        <li>Real estate</li>
-        <li>Equipment</li>
-        <li>Inventory</li>
-        <li>Accounts receivable</li>
-        <li>Cash savings or investments</li>
-      </ul>
-      
-      <p>The value of collateral typically needs to exceed the loan amount, often by 20% or more, to account for potential depreciation or liquidation costs.</p>
-      
-      <p>Additionally, lenders frequently require personal guarantees from business owners, making you personally liable for the debt if your business cannot repay it.</p>
-      
-      <h2>5. Industry and Economic Conditions</h2>
-      
-      <p>Factors beyond your control also influence loan decisions. Lenders assess:</p>
-      
-      <ul>
-        <li>The overall economic climate</li>
-        <li>Industry-specific trends and challenges</li>
-        <li>Market competition</li>
-        <li>Regulatory environment</li>
-      </ul>
-      
-      <p>Businesses in stable or growing industries generally find it easier to secure funding than those in volatile or declining sectors. Similarly, applications during economic downturns face greater scrutiny.</p>
-      
-      <p>Understanding these external factors can help you time your application strategically or address potential concerns proactively in your business plan.</p>
-      
-      <h2>Conclusion</h2>
-      
-      <p>While loan approval depends on numerous factors, focusing on these five key areas will significantly strengthen your application. Before applying, take time to assess your position in each category and address any weaknesses.</p>
-      
-      <p>Remember that different lenders have different criteria and risk tolerances. If traditional banks seem hesitant, consider alternative funding sources such as online lenders, credit unions, or specialized industry lenders who might better understand your business model.</p>
-      
-      <p>At Cruise World International, we work with businesses to understand their unique funding needs and connect them with the most appropriate financing solutions. Our experts can guide you through the application process and help you present your business in the best possible light to potential lenders.</p>
-    `
+    tags: ["Investment Financing", "SPV/SPE", "Due Diligence"],
+    content: investmentLoanArticle
   }
 ];
 
