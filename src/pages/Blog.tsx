@@ -17,7 +17,7 @@ const blogPosts = [
     title: "5 Key Factors That Determine Your Business Loan Approval",
     excerpt: "Understanding what lenders look for when reviewing business loan applications can significantly improve your chances of securing funding. In this article, we explore the five critical factors that influence loan approval decisions.",
     date: "June 12, 2023",
-    author: "Ahmed Al-Maamari",
+    author: "Dr. Ahmed Murad Al Balushi",
     category: "Business Loans",
     image: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     tags: ["Funding", "Business Loans", "Finance"]

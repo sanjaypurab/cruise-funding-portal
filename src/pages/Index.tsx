@@ -30,37 +30,37 @@ const Index = () => {
               title="Business Loans"
               description="Flexible business loans with competitive rates and tailored repayment terms to help your business grow."
               icon={<DollarSign className="h-6 w-6" />}
-              link="/services#business-loans"
+              link="/business-loans"
             />
             <ServiceCard
               title="Investment Funding"
               description="Access to capital from our global network of investors looking to support promising businesses."
               icon={<BarChart3 className="h-6 w-6" />}
-              link="/services#investment-funding"
+              link="/investment-financing"
             />
             <ServiceCard
               title="Venture Capital"
               description="Early-stage investment for startups with high growth potential and innovative business models."
               icon={<Briefcase className="h-6 w-6" />}
-              link="/services#venture-capital"
+              link="/venture-capital"
             />
             <ServiceCard
               title="Equity Investments"
               description="Long-term partnership through equity investments to provide capital and strategic support."
               icon={<PiggyBank className="h-6 w-6" />}
-              link="/services#equity-investments"
+              link="/equity-investments"
             />
             <ServiceCard
               title="Project Financing"
               description="Specialized funding solutions for large-scale projects across various industries."
               icon={<Building className="h-6 w-6" />}
-              link="/services#project-financing"
+              link="/project-financing"
             />
             <ServiceCard
               title="International Funding"
               description="Cross-border investment solutions with expertise in Middle Eastern and Turkish markets."
               icon={<Globe className="h-6 w-6" />}
-              link="/services#international-funding"
+              link="/international-funding"
             />
           </div>
           
