@@ -288,14 +288,14 @@ const ArticleSectionView: React.FC<{ section: ArticleSection }> = ({ section }) 
     {section.closingFlow && (
       <div className="flex flex-wrap items-center gap-2 mt-8">
         {section.closingFlow.map((step, index) => (
-          <React.Fragment key={step}>
+          <span key={step} className="inline-flex items-center gap-2">
             {index > 0 && (
               <ChevronRight className="h-4 w-4 text-gray-300 shrink-0" />
             )}
             <span className="px-3.5 py-1.5 bg-cruise-50 text-cruise-700 rounded-full text-sm font-semibold border border-cruise-100">
               {step}
             </span>
-          </React.Fragment>
+          </span>
         ))}
       </div>
     )}
