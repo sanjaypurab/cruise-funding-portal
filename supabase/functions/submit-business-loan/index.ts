@@ -7,7 +7,7 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const db = createClient(supabaseUrl, serviceKey);
-const prohibited = /(password|pin|otp|one[- ]time password|card number|cvv|security code)/i;
+const prohibited = /\b(password|passcode|pin|otp|one[- ]time password|card number|cvv|cvc|security code)\b/i;
 const allowedTypes = new Set(["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "image/jpeg", "image/png"]);
 const maxFileSize = 10 * 1024 * 1024;
 
@@ -27,14 +27,19 @@ serve(async (req) => {
     }
     const body = await req.json();
     const data = body.data ?? {};
-    const payloadText = JSON.stringify(data);
-    if (prohibited.test(payloadText)) return jsonResponse({ error: "Please remove banking passwords, PINs, OTPs, card numbers, or security codes." }, 400);
+    const badField = Object.entries(data).find(([, v]) => typeof v === "string" && prohibited.test(v));
+    if (badField) return jsonResponse({ field: badField[0], error: `The field "${badField[0]}" contains a word like password, PIN, OTP, card number or CVV. Please remove it — we never need banking credentials.` }, 400);
     const ownerName = clean(data.ownerName, 120);
     const mobile = clean(data.mobile, 40);
     const businessEmail = clean(data.businessEmail, 255);
     const requestedAmount = money(data.requestedFinancingAmount);
     const ownership = Number(data.ownershipPercentage);
-    if (!ownerName || !mobile || !requestedAmount || !data.financingPurpose || !data.privacyConsent || ownership < 0 || ownership > 100) return jsonResponse({ error: "Please complete all required fields and confirm the privacy notice." }, 400);
+    if (!ownerName) return jsonResponse({ field: "ownerName", error: "Owner name is required." }, 400);
+    if (!mobile) return jsonResponse({ field: "mobile", error: "Mobile number is required." }, 400);
+    if (!Number.isFinite(ownership) || ownership < 0 || ownership > 100) return jsonResponse({ field: "ownershipPercentage", error: "Ownership must be between 0 and 100." }, 400);
+    if (!requestedAmount) return jsonResponse({ field: "requestedFinancingAmount", error: "Requested financing amount must be greater than 0." }, 400);
+    if (!data.financingPurpose) return jsonResponse({ field: "financingPurpose", error: "Financing purpose is required." }, 400);
+    if (!data.privacyConsent) return jsonResponse({ error: "Please accept the Privacy Policy." }, 400);
     const { data: numberData, error: numberError } = await db.rpc("next_business_loan_application_number");
     if (numberError) throw numberError;
     const applicationNumber = numberData as string;
@@ -75,5 +80,5 @@ serve(async (req) => {
        await resend.emails.send({ from: "Cruise Finance Group <onboarding@resend.dev>", to: recipients, subject: `Business Financing Application Received — ${applicationNumber}`, html: `<p>Dear ${ownerName},</p><p>We have received your business financing application for ${clean(data.companyName) || "your business"}.</p><p><strong>Application ID:</strong> ${applicationNumber}</p><p>Our team will review your submission and contact you with next steps.</p>` });
      } catch (emailError) { console.error("Application email unavailable", emailError); }
     return jsonResponse({ success: true, application });
-  } catch (error) { console.error("Business loan submission failed", error); return jsonResponse({ error: "We could not submit your application. Please try again." }, 500); }
+  } catch (error) { console.error("Business loan submission failed", error); const msg = error instanceof Error ? error.message : (error as { message?: string })?.message ?? String(error); return jsonResponse({ error: `Our server could not save your application (${msg}). Please try again or contact us.` }, 500); }
 });
